@@ -2,9 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 
-const mount = () => {
-  const el = document.getElementById('root')
+const mount = (el: HTMLElement) => {
   ReactDOM.render(<App />, el)
 }
 
-mount()
+const el = document.getElementById('dev-root-ads')
+
+if (el) {
+  mount(el)
+}
+
+export { mount, App }

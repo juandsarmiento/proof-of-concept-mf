@@ -39,12 +39,12 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: 'container',
+      name: 'ads',
       filename: 'remoteEntry.js',
-      remotes: {
-        // ads: 'ads@http://localhost:8080/remoteEntry.js'
+      remotes: {},
+      exposes: {
+        './App': './src/bootstrap'
       },
-      exposes: {},
       shared: require('./package.json').dependencies
     }),
     new HtmlWebPackPlugin({
