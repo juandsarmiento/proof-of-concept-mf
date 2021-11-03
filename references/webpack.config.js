@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   output: {
-    publicPath: 'http://localhost:8081/',
+    publicPath: 'http://localhost:8082/',
   },
 
   resolve: {
@@ -13,13 +13,14 @@ module.exports = {
   },
 
   devServer: {
-    port: 8081,
+    port: 8082,
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
       'Access-Control-Allow-Headers':
         'X-Requested-With, content-type, Authorization',
     },
+    historyApiFallback: true,
   },
 
   module: {
@@ -54,11 +55,11 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: 'ads',
+      name: 'references',
       filename: 'remoteEntry.js',
       remotes: {},
       exposes: {
-        './AdsApp': './src/bootstrap',
+        './ReferenceApp': './src/bootstrap',
       },
       shared: require('./package.json').dependencies,
     }),

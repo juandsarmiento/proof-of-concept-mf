@@ -1,7 +1,7 @@
 {
-  "name": "ads",
+  "name": "reference",
   "version": "1.0.0",
-  "description": "ads micro",
+  "description": "reference micro",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -37,6 +37,7 @@
     "webpack-dev-server": "^4.4.0"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
     "chiper-sb-admin": "^1.19.12",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

@@ -1,5 +1,10 @@
 import React from 'react'
+import List from './modules/List'
 
-const App = () => <div>Ads MicroFront</div>
+const App = () => (
+  <div>
+    <List />
+  </div>
+)
 
 export default App
