@@ -6,21 +6,30 @@
   "scripts": {
     "build": "webpack --mode production",
     "start:live": "webpack-dev-server --open --mode development --live-reload",
+    "build:styles": "npx tailwind -i ./src/assets/styles.css -o ./src/assets/tailwind.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Juan Sarmiento",
   "license": "MIT",
   "devDependencies": {
-    "@types/react": "^17.0.33",
-    "@types/react-dom": "^17.0.10",
     "@babel/core": "7.9.6",
     "@babel/preset-env": "^7.10.3",
     "@babel/preset-react": "7.9.4",
     "@babel/preset-typescript": "^7.10.4",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@types/react-router-dom": "^5.3.2",
+    "autoprefixer": "^10.4.0",
     "babel-loader": "8.1.0",
     "css-loader": "^6.5.0",
+    "dotenv-webpack": "^7.0.3",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.4.3",
+    "postcss": "^8.3.11",
+    "style-loader": "^0.23.1",
+    "svg-url-loader": "^7.1.1",
+    "tailwindcss": "^2.2.19",
     "ts-loader": "^9.2.6",
     "typescript": "^4.4.4",
     "webpack": "^5.60.0",
@@ -28,7 +37,13 @@
     "webpack-dev-server": "^4.4.0"
   },
   "dependencies": {
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@material-ui/core": "^4.12.3",
+    "@mui/material": "^5.0.6",
+    "chiper-sb-admin": "^1.19.12",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.3.0"
   }
 }
